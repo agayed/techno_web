@@ -101,6 +101,8 @@ img {vertical-align: middle;}
 <link rel="stylesheet" type="text/css" href="w3-theme-blue-grey.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
 </head>
 <body>
 
@@ -230,6 +232,13 @@ img {vertical-align: middle;}
   <span class="dot" onclick="currentSlide(10)"></span> 
 </div>
 
+
+
+
+
+
+
+
 <script>
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -258,5 +267,32 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 </script>
+<!-- <section>
+  <img class="mySlides" src="images.jpg"
+  style="width:100%">
+  <img class="mySlides" src="10.1 bg.jpg"
+  style="width:100%">
+  <img class="mySlides" src="logo.jpg"
+  style="width:100%">
+</section> -->
+
+<script>
+  // Automatic Slideshow - change image every 3 seconds
+  var myIndex = 0;
+  carousel();
+  
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 3000);
+  }
+  </script>
+
 </body>
 </html> 
