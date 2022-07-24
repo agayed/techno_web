@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppims:wght;@300;400;500;600;700;800;900&display=swap');
+
+* {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+       font-family: 'Poppins', sans-serif;
+}
+
+body {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       min-height: 100vh;
+       /* background: rgb(246, 6, 6); */
+}
+
+ul {
+       position: relative;
+       transform: skewy(-15deg);
+}
+
+ul li {
+       position: relative;
+       list-style: none;
+       width: 120px;
+       background: #c0c6f1;
+       padding: 15px;
+       transition: 0.5s;
+       z-index: calc(1 * var(--i));
+}
+
+ul li:hover {
+       transform: translate(-50px);
+       background: var(--clr);
+}
+
+ul li::before {
+       content: '';
+       position: absolute;
+       top: 0;
+       left: -40px;
+       width: 40px;
+       height: 100%;
+       background: #c0c6f1;
+       filter: brightness(0.7);
+       transform-origin: right;
+       transform: skewy(45deg);
+       transition: 0.5s;
+}
+
+ul li:hover::before {
+       background: var(--clr);
+       filter: brightness(0.7);
+}
+
+ul li::after {
+       content: '';
+       position: absolute;
+       top: -40px;
+       left: 0;
+       width: 100%;
+       height: 40px;
+       background: #c0c6f1;
+       filter: brightness(0.9);
+       transform-origin: bottom;
+       transform: skewX(45deg);
+       transition: 0.5s;
+}
+
+ul li:hover::after {
+       background: var(--clr);
+       filter: brightness(0.9);
+
+}
+
+ul li a {
+       text-decoration: none;
+       color: #6b6b6c;
+       display: block;
+       text-transform: uppercase;
+       letter-spacing: 0.05em;
+       transition: 0.5s;
+}
+
+ul li:hover a {
+       color: #fff;
+}
+
+ul li:last-child::after {
+       box-shadow: -120px 120px 20px rgba(0, 0, 0, 0.25);
+}
+
+ul li span {
+       position: absolute;
+       top: 0;
+       left: -40px;
+       width: 40px;
+       height: 100%;
+       /* background: #c0c6f1; */
+       filter: brightness(0.7);
+       transform-origin: right;
+       transform: skewy(45deg);
+       transition: 0.5s;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+}
